@@ -57,4 +57,4 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 ![imairuyo_stop.vbs](https://github.com/user-attachments/assets/9bb1cddb-2ea3-4b81-be40-ad0495943573)
 
 タスクマネージャー上から終了する場合は、以下のようにアプリを指定して終了させます。
-![タスクマネージャー](ttps://github.com/user-attachments/assets/cccea6d0-db98-46be-ac0e-0c30fc0bd778)
+![タスクマネージャー](https://github.com/user-attachments/assets/cccea6d0-db98-46be-ac0e-0c30fc0bd778)
