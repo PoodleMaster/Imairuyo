@@ -56,6 +56,17 @@ PowerShellでうまくいかない方は、こちらをお試しください。
 起動するとイマイルヨが実行されます。<BR>
 
 <img width="600" src="https://github.com/user-attachments/assets/9bb1cddb-2ea3-4b81-be40-ad0495943573">
-
 タスクマネージャー上から終了する場合は、以下のようにアプリを指定して終了させます。
-![タスクマネージャー](https://github.com/user-attachments/assets/cccea6d0-db98-46be-ac0e-0c30fc0bd778)
+
+### (3) イマイルヨのプロセスID確認方法
+イマイルヨのプロセスID確認方法は、コマンドプロンプトから以下のコマンドを実行してください。
+```
+> cd  %TEMP%
+> type imairuyo_start.log
+imairuyo_start: 34408
+```
+上記実行例の場合、「34408」が、起動したイマイルヨの「プロセスID」となります。
+
+イマイルヨのプロセスを確認したい場合は、「タスクバー右クリック」➔「タスクマネージャー」を起動し、タスクマネージャーの「詳細」を押下し、検索バーに「script」等を入力してください。
+![タスクマネージャー](https://github.com/user-attachments/assets/386ecc5a-6e11-48cd-ac53-f5ea71e0a1a1)
+先ほど探したプロセスID（imairuyo_start: 34408）と同じプロセスIDがあるので、これがイマイルヨのプロセスになりますので、これを右クリックし「タスクの終了」を選択し、プロセスを終了させます。
