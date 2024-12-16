@@ -2,7 +2,7 @@
 イマイルヨは、Teams等で勝手に退席中にならないようにするめのツールです。<BR>
 イマイルヨの[記事](https://qiita.com/PoodleMaster/items/4c2ad1501e615b164f7f)はこちらにあります。
 
-## Imairuyo for PowerShell
+## ■ Imairuyo for PowerShell
 
 ### (1) PowerShellスクリプトが実行できるか確認
 PowerShellスクリプトが実行できるか確認するために、PowerShellを開いて「`Get-ExecutionPolicy`」を実行してください。<BR>
@@ -39,7 +39,7 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 ### (3) 終了方法
 終了方法は、起動時にできたPowerShellウィンドウを閉じてください。<BR>
 
-## Imairuyo for WindowsScriptHost（VisualBasic）
+## ■ Imairuyo for WindowsScriptHost（VisualBasic）
 
 ### (1) 実行方法
 「`imairuyo_start.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。
