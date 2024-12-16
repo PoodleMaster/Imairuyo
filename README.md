@@ -24,6 +24,13 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 | AllSigned              | 信頼された発行元から署名されたスクリプトのみが実行可能|
 | Unrestricted           | すべてのスクリプトが実行可能ですが、外部からダウンロードしたスクリプトには警告が表示 |
 
+> 以下のようにプログラムをポリシー指定することで実行できる場合もあります。<BR>
+> この場合は、ポリシー指定すようにバッチファイルを作っておくと便利です。
+> バッチファイル ： imairuyo.bat<BR>
+> ```bat:imairuyo.bat
+> powershell -ExecutionPolicy RemoteSigned -File imairuyo.ps1
+> ```
+
 ### (2) 実行方法
 「`imairuyo.ps1`」または「`imairuyo_time.ps1`」アイコンを右クリックして「`PowerShell で実行`」を選択し起動してください。<BR>
 起動するとPowerShellウィンドウが開きイマイルヨが実行されます。<BR>
