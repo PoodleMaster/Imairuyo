@@ -40,6 +40,7 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 終了方法は、起動時にできたPowerShellウィンドウを閉じてください。<BR>
 
 ## ■ Imairuyo for WindowsScriptHost（VisualBasic）
+PowerShellでうまくいかない方は、こちらをお試しください。
 
 ### (1) 実行方法
 「`imairuyo_start.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。
