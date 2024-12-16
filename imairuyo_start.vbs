@@ -1,8 +1,3 @@
-' ------------------------------------------------------------------------------------------
-' imairuyo_start
-' By PoodleMaster
-' ------------------------------------------------------------------------------------------
-
 Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
 Set objShell = CreateObject("WScript.Shell")
 Set fso = CreateObject("Scripting.FileSystemObject")
