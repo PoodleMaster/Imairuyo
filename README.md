@@ -42,16 +42,19 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 ## Imairuyo for WindowsScriptHost（VisualBasic）
 
 ### (1) 実行方法
-「`imairuyo_start.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。<BR>
+「`imairuyo_start.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。
 起動するとイマイルヨが実行されます。（ウィンドウなどは表示されません）<BR>
 
 ![imairuyo_start.vbs](https://github.com/user-attachments/assets/586bea07-2698-4cbe-befa-efc380d23dcb)
 
-タスクマネージャー上は以下のようにアプリが動作していることが分かります。<BR>
+タスクマネージャー上では、以下のようにアプリが動作していることが分かります。
 ![タスクマネージャー](https://github.com/user-attachments/assets/a08885a9-34b2-40fd-8c4b-e468677d0dff)
 
 ### (2) 終了方法
-「`imairuyo_stop.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。<BR>
+「`imairuyo_stop.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。
 起動するとイマイルヨが実行されます。（ウィンドウなどは表示されません）<BR>
 
 ![imairuyo_stop.vbs](https://github.com/user-attachments/assets/9bb1cddb-2ea3-4b81-be40-ad0495943573)
+
+タスクマネージャー上から終了する場合は、以下のようにアプリを指定して終了させます。
+![タスクマネージャー](ttps://github.com/user-attachments/assets/cccea6d0-db98-46be-ac0e-0c30fc0bd778)
