@@ -50,6 +50,7 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 PowerShellでうまくいかない方は、こちらをお試しください。
 
 ### (1) 実行方法
+❖ imairuyo_start.vbs実行例<BR>
 「`imairuyo_start.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。
 起動するとイマイルヨが実行されます。（**ウィンドウなどは表示されません**）<BR>
 
@@ -59,6 +60,7 @@ PowerShellでうまくいかない方は、こちらをお試しください。
 ![タスクマネージャー](https://github.com/user-attachments/assets/a08885a9-34b2-40fd-8c4b-e468677d0dff)
 
 ### (2) 終了方法
+❖ imairuyo_stop.vbs実行例<BR>
 「`imairuyo_stop.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。
 起動するとイマイルヨが実行されます。<BR>
 
