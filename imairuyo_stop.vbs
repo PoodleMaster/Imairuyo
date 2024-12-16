@@ -2,7 +2,6 @@
 ' imairuyo_stop
 ' By PoodleMaster
 ' ------------------------------------------------------------------------------------------
-
 Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
 Set fso = CreateObject("Scripting.FileSystemObject")
 Dim logFilePath, lockFilePath, targetProcessID
@@ -34,13 +33,7 @@ End If
 ' WMIを使って該当プロセスを終了
 Set colProcesses = objWMIService.ExecQuery("SELECT * FROM Win32_Process WHERE ProcessId = " & targetProcessID)
 For Each objProcess In colProcesses
-    ' wscript.exeであることを確認
-    If InStr(LCase(objProcess.CommandLine), "wscript.exe") > 0 And InStr(LCase(objProcess.CommandLine), LCase(WScript.ScriptFullName)) > 0 Then
-        objProcess.Terminate ' プロセス終了
-        WScript.Echo "Terminated imairuyo_start with PID " & targetProcessID
-    Else
-        WScript.Echo "The process is not running the imairuyo_start script."
-    End If
+    objProcess.Terminate
 Next
 
 ' ロックファイルを削除
