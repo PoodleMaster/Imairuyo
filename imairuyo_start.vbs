@@ -6,6 +6,20 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 Dim logFilePath
 logFilePath = fso.GetSpecialFolder(2) & "\imairuyo_start.log"
 
+' ロックファイルのパス
+Dim lockFilePath
+lockFilePath = fso.GetSpecialFolder(2) & "\imairuyo_lock.lck"
+
+' ロックファイルが存在する場合、すでに実行中とみなして終了
+If fso.FileExists(lockFilePath) Then
+    WScript.Echo "Another instance is already running."
+    WScript.Quit
+End If
+
+' ロックファイルを作成して、他のインスタンスからの起動を防止
+Set lockFile = fso.CreateTextFile(lockFilePath, True)
+lockFile.Close
+
 ' 以下のフォルダにimairuyoのPIDを格納します。
 ' PIDの確認方法は、以下のコマンドで確認できます。
 ' cd %TEMP%
@@ -26,6 +40,13 @@ Do
     objShell.SendKeys "^{ESC}"
     WScript.Sleep 10000 ' 10秒
 Loop
+
+' プログラム終了時にロックファイルを削除
+Sub DeleteLockFile()
+    If fso.FileExists(lockFilePath) Then
+        fso.DeleteFile(lockFilePath)
+    End If
+End Sub
 
 ' 現在のプロセスIDを取得する関数
 Function GetCurrentProcessID()
