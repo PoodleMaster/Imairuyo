@@ -1,4 +1,6 @@
 # Imairuyo（イマイルヨ）
+イマイルヨは、Teams等で勝手に退席中にならないようにするめのツールです。<BR>
+イマイルヨの[記事](https://qiita.com/PoodleMaster/items/4c2ad1501e615b164f7f)はこちらにあります。
 
 ## Imairuyo for PowerShell
 
