@@ -24,7 +24,7 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 | AllSigned              | 信頼された発行元から署名されたスクリプトのみが実行可能|
 | Unrestricted           | すべてのスクリプトが実行可能ですが、外部からダウンロードしたスクリプトには警告が表示 |
 
-> 以下のようにプログラムをポリシー指定することで実行できる場合もあります。<BR>
+> プログラムをポリシー指定することで実行できる場合もあります。<BR>
 > 以下のようにバッチファイルを作っておくと便利です。<BR>
 > バッチファイル ： imairuyo.bat<BR>
 > ```bat:imairuyo.bat
