@@ -51,3 +51,7 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 ![タスクマネージャー](https://github.com/user-attachments/assets/a08885a9-34b2-40fd-8c4b-e468677d0dff)
 
 ### (2) 終了方法
+「`imairuyo_stop.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。<BR>
+起動するとイマイルヨが実行されます。（ウィンドウなどは表示されません）<BR>
+
+![imairuyo_stop.vbs](https://github.com/user-attachments/assets/9bb1cddb-2ea3-4b81-be40-ad0495943573)
