@@ -1,9 +1,18 @@
 Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
 Set fso = CreateObject("Scripting.FileSystemObject")
-Dim logFilePath, targetProcessID
+Dim logFilePath, lockFilePath, targetProcessID
 
 ' ログファイルのパス
 logFilePath = fso.GetSpecialFolder(2) & "\imairuyo_start.log"
+
+' ロックファイルのパス
+lockFilePath = fso.GetSpecialFolder(2) & "\imairuyo_lock.lck"
+
+' ロックファイルが存在しない場合は終了
+If Not fso.FileExists(lockFilePath) Then
+    WScript.Echo "No running instance found."
+    WScript.Quit
+End If
 
 ' ログファイルからプロセスIDを取得
 If fso.FileExists(logFilePath) Then
@@ -22,3 +31,10 @@ Set colProcesses = objWMIService.ExecQuery("SELECT * FROM Win32_Process WHERE Pr
 For Each objProcess In colProcesses
     objProcess.Terminate
 Next
+
+' ロックファイルを削除
+If fso.FileExists(lockFilePath) Then
+    fso.DeleteFile(lockFilePath)
+End If
+
+WScript.Echo "imairuyo_stop completed."
