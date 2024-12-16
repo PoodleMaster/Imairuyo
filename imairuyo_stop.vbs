@@ -1,7 +1,3 @@
-' ------------------------------------------------------------------------------------------
-' imairuyo_stop
-' By PoodleMaster
-' ------------------------------------------------------------------------------------------
 Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
 Set fso = CreateObject("Scripting.FileSystemObject")
 Dim logFilePath, lockFilePath, targetProcessID
