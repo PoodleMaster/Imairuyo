@@ -39,13 +39,6 @@ Do
     WScript.Sleep 10000 ' 10秒
 Loop
 
-' プログラム終了時にロックファイルを削除
-Sub DeleteLockFile()
-    If fso.FileExists(lockFilePath) Then
-        fso.DeleteFile(lockFilePath)
-    End If
-End Sub
-
 ' 現在のプロセスIDを取得する関数
 Function GetCurrentProcessID()
     Dim colProcesses, objProcess
