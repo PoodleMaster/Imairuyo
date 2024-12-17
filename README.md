@@ -84,7 +84,7 @@ imairuyo_start: 34408
 ![タスクマネージャー](https://github.com/user-attachments/assets/386ecc5a-6e11-48cd-ac53-f5ea71e0a1a1)
 先ほど探したプロセスID（imairuyo_start: 34408）と同じプロセスIDがあるので、これがイマイルヨのプロセスになりますので、これを右クリックし「タスクの終了」を選択し、プロセスを終了させます。
 
-**※タスクマネージャーから「`タスクの終了`」を選択した場合は、ロックファイルが残るため、「`imairuyo_start.vbs`」の新規起動ができなくなってしまいます。必ず「`imairuyo_recover.vbs`」を実行して、ロックファイルを削除してください。**
+> **※タスクマネージャーから「タスクの終了」を選択した場合は、ロックファイルが残るため、「imairuyo_start.vbs」の新規起動ができなくなってしまいます。必ず「imairuyo_stop.vbs」または「imairuyo_recover.vbs」を実行して、ロックファイルを削除してください。**
 
 ### (4) トラブルシューティング
 「`imairuyo_recover.vbs`」アイコンを右クリックして「`PowerShell で実行`」を選択し起動してください。<BR>
