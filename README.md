@@ -43,7 +43,7 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 #### ❖ imairuyo_time.ps1実行例
 ![imairuyo_time.pas1](https://github.com/user-attachments/assets/97a58763-3baa-4c10-a2c3-b48a0b393993)
 
-#### ❖ imairuyo_time.bat
+#### ❖ imairuyo.bat
 こちらはバッチファイルなので、ダブルクリックで起動可能です。
 
 ### (3) 終了方法
