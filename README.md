@@ -68,6 +68,7 @@ PowerShellでうまくいかない方は、こちらをお試しください。
 起動するとイマイルヨが実行されます。<BR>
 
 <img width="600" src="https://github.com/user-attachments/assets/9bb1cddb-2ea3-4b81-be40-ad0495943573">
+
 タスクマネージャー上から終了する場合は、以下のようにアプリを指定して終了させます。
 
 ### (3) イマイルヨのプロセスID確認方法
