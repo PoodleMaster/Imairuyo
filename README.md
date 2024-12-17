@@ -37,11 +37,14 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 
 <img width="400" src="https://github.com/user-attachments/assets/46b80683-294f-4b50-8d99-7c42613b61ec">
 
-#### ❖ imairuyo.pas1実行例
+#### ❖ imairuyo.ps1実行例
 ![imairuyo.pas1](https://github.com/user-attachments/assets/81e67ede-fcbf-416d-ae81-685a63e259d7)
 
-#### ❖ imairuyo_time.pas1実行例
+#### ❖ imairuyo_time.ps1実行例
 ![imairuyo_time.pas1](https://github.com/user-attachments/assets/97a58763-3baa-4c10-a2c3-b48a0b393993)
+
+#### ❖ imairuyo_time.bat
+こちらはバッチファイルなので、ダブルクリックで起動可能です。
 
 ### (3) 終了方法
 終了方法は、起動時にできたPowerShellウィンドウを閉じてください。<BR>
