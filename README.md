@@ -92,8 +92,8 @@ imairuyo_start: 34408
 > dir imairuyo_lock.lck
 > DEL imairuyo_lock.lck
 ```
-> ※「%TEMP%」とは、「C:\Users\Username\AppData\Local\Temp」のことです。<BR>
-> ※ PowerShellの場合、該当ディレクトリへの移動は「cd $env:TEMP」としてください。<BR>
+> ※「`%TEMP%`」とは、「`C:\Users\Username\AppData\Local\Temp`」のことです。<BR>
+> ※ PowerShellの場合、該当ディレクトリへの移動は「`cd $env:TEMP`」としてください。<BR>
 
 #### ❖ 注意事項
 ※タスクマネージャーから「`タスクの終了`」を選択した場合は、ロックファイル（`imairuyo_lock.lck`）が残るため、「`imairuyo_start.vbs`」の新規起動ができなくなってしまいます。そのため、必ずロックファイルの削除をお願いいたします。ロックファイルは手動で削除する他、「`imairuyo_stop.vbs`」または「`imairuyo_recover.vbs`」を実行しても、ロックファイルの削除が可能です。
