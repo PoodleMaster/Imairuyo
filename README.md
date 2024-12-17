@@ -87,7 +87,7 @@ imairuyo_start: 34408
 「`imairuyo_recover.vbs`」アイコンを右クリックして「`PowerShell で実行`」を選択し起動してください。<BR>
 処理としては以下3つの処理を実行します。
 
-1. WScript.exe プロセスをすべて終了（自身のプロセスは除外）
+1. WScript.exe プロセスをすべて終了（「`imairuyo_recover.vbs`」自身のプロセスは除外）
 2. ロックファイルを削除
-3. 自身のプロセスを終了
+3. 「`imairuyo_recover.vbs`」自身のプロセスを終了
 
