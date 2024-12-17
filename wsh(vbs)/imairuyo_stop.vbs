@@ -51,6 +51,9 @@ If Not processFound Then
 End If
 On Error GoTo 0
 
+' プロセス終了待機
+WScript.Sleep 2000 ' 2秒待機して完全終了を確認
+
 ' ロックファイルを削除
 If fso.FileExists(lockFilePath) Then
     fso.DeleteFile(lockFilePath)
