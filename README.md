@@ -103,10 +103,9 @@ imairuyo_start: 34408
 ※タスクマネージャーから「`タスクの終了`」を選択した場合は、ロックファイル（`imairuyo_lock.lck`）が残るため、「`imairuyo_start.vbs`」の新規起動ができなくなってしまいます。そのため、必ずロックファイルの削除をお願いいたします。ロックファイルは手動で削除する他、「`imairuyo_stop.vbs`」または「`imairuyo_recover.vbs`」を実行しても、ロックファイルの削除が可能です。
 
 ### (4) トラブルシューティング
-「`imairuyo_recover.vbs`」アイコンを右クリックして「`PowerShell で実行`」を選択し起動してください。<BR>
-処理としては以下3つの処理を実行します。
-
+何か問題が発生したときは、「`imairuyo_recover.vbs`」を実行してください。実行の仕方は、アイコンを右クリックして「`PowerShell で実行`」を選択し起動してください。
+実行すると以下3つの処理を実行します。
 1. WScript.exe プロセスをすべて終了（「`imairuyo_recover.vbs`」自身のプロセスは除外）
-2. ロックファイルを削除
-3. 「`imairuyo_recover.vbs`」自身のプロセスを終了
+1. ロックファイル（`imairuyo_lock.lck`）を削除
+1. 「`imairuyo_recover.vbs`」自身のプロセスを終了
 
