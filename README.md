@@ -53,7 +53,7 @@ PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
 PowerShellでうまくいかない方は、こちらをお試しください。
 
 ### (1) 実行方法
-❖ imairuyo_start.vbs実行例<BR>
+#### ❖ imairuyo_start.vbs実行例<BR>
 「`imairuyo_start.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。
 起動するとイマイルヨが実行されます。（**ウィンドウなどは表示されません**）<BR>
 
@@ -63,7 +63,7 @@ PowerShellでうまくいかない方は、こちらをお試しください。
 ![タスクマネージャー](https://github.com/user-attachments/assets/a08885a9-34b2-40fd-8c4b-e468677d0dff)
 
 ### (2) 終了方法
-❖ imairuyo_stop.vbs実行例<BR>
+#### ❖ imairuyo_stop.vbs実行例<BR>
 「`imairuyo_stop.vbs`」アイコンを右クリックして「`プログラムから開く` ➜ `Microsoft®Windows Based Script Host`」を選択し起動してください。
 起動するとイマイルヨが実行されます。<BR>
 
@@ -84,7 +84,18 @@ imairuyo_start: 34408
 ![タスクマネージャー](https://github.com/user-attachments/assets/386ecc5a-6e11-48cd-ac53-f5ea71e0a1a1)
 先ほど探したプロセスID（imairuyo_start: 34408）と同じプロセスIDがあるので、これがイマイルヨのプロセスになりますので、これを右クリックし「タスクの終了」を選択し、プロセスを終了させます。
 
+#### ❖ 注意事項
 > **※タスクマネージャーから「タスクの終了」を選択した場合は、ロックファイルが残るため、「imairuyo_start.vbs」の新規起動ができなくなってしまいます。必ず「imairuyo_stop.vbs」または「imairuyo_recover.vbs」を実行して、ロックファイルを削除してください。**
+
+#### ❖ ロックファイル手動削除方法
+コマンドプロンプトからのロックファイルの確認方法、及び、手動削除は方法は、以下の通りです。<BR>
+```
+> cd %TEMP%
+> dir imairuyo_lock.lck
+> DEL imairuyo_lock.lck
+```
+> ※「%TEMP%」とは、「C:\Users\Username\AppData\Local\Temp」のことです。<BR>
+> ※ PowerShellの場合、該当ディレクトリへの移動は「cd $env:TEMP」としてください。<BR>
 
 ### (4) トラブルシューティング
 「`imairuyo_recover.vbs`」アイコンを右クリックして「`PowerShell で実行`」を選択し起動してください。<BR>
