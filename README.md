@@ -1,4 +1,7 @@
+![イマイルヨ](https://github.com/user-attachments/assets/1caba5e4-84f2-4b82-abd2-6a705e21b1dd)
+
 # Imairuyo（イマイルヨ）
+
 **イマイルヨは、Teams等で勝手に退席中にならないようにするめのツールです。**<BR>
 イマイルヨの[記事](https://qiita.com/PoodleMaster/items/4c2ad1501e615b164f7f)はこちらにあります。
 
