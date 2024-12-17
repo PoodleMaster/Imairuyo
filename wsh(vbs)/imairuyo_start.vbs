@@ -12,7 +12,7 @@ lockFilePath = fso.GetSpecialFolder(2) & "\imairuyo_lock.lck"
 
 ' ロックファイルが存在する場合、すでに実行中とみなして終了
 If fso.FileExists(lockFilePath) Then
-    WScript.Echo "Another instance is already running."
+    MsgBox "Another instance is already running.", vbExclamation, "Error"
     WScript.Quit
 End If
 
@@ -20,19 +20,17 @@ End If
 Set lockFile = fso.CreateTextFile(lockFilePath, True)
 lockFile.Close
 
-' 以下のフォルダにimairuyoのPIDを格納します。
-' PIDの確認方法は、以下のコマンドで確認できます。
-' cd %TEMP%
-' type imairuyo_start.log
-
 ' 自身のプロセスIDを取得
 Dim processID
 processID = GetCurrentProcessID()
 
+' 起動時にPIDをメッセージボックスに表示
+MsgBox "imairuyo_start: PID = " & processID, vbInformation, "Process ID"
+
 ' ログファイルにプロセスIDを記録
 Dim logFile
 Set logFile = fso.CreateTextFile(logFilePath, True)
-logFile.WriteLine "imairuyo_start: " & processID
+logFile.WriteLine "imairuyo_start: PID = " & processID
 logFile.Close
 
 ' メインループ

@@ -2,39 +2,57 @@ Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
 Set fso = CreateObject("Scripting.FileSystemObject")
 Dim logFilePath, lockFilePath, targetProcessID
 
-' ログファイルのパス
+' ログファイルとロックファイルのパス
 logFilePath = fso.GetSpecialFolder(2) & "\imairuyo_start.log"
-
-' ロックファイルのパス
 lockFilePath = fso.GetSpecialFolder(2) & "\imairuyo_lock.lck"
 
-' ロックファイルが存在しない場合は終了
-If Not fso.FileExists(lockFilePath) Then
-    WScript.Echo "No running instance found."
-    WScript.Quit
-End If
-
-' ログファイルからプロセスIDを取得
+' ログファイルからPIDを取得
 If fso.FileExists(logFilePath) Then
-    Dim logFile, line
+    Dim logFile, line, tempPID
     Set logFile = fso.OpenTextFile(logFilePath, 1)
-    line = logFile.ReadLine
+    line = Trim(logFile.ReadLine) ' 余分な空白・改行を削除
     logFile.Close
-    targetProcessID = Split(line, ": ")(1) ' プロセスIDを取得
+
+    ' PIDを抽出
+    If InStr(line, "PID = ") > 0 Then
+        tempPID = Trim(Split(line, "PID = ")(1)) ' PID部分を取り出す
+        If IsNumeric(tempPID) Then
+            targetProcessID = CLng(tempPID) ' 数値に変換
+            MsgBox "Extracted PID: " & targetProcessID, vbInformation, "PID Retrieved"
+        Else
+            MsgBox "PID is not numeric: " & tempPID, vbCritical, "Error"
+            WScript.Quit
+        End If
+    Else
+        MsgBox "Log file format invalid.", vbCritical, "Error"
+        WScript.Quit
+    End If
 Else
-    WScript.Echo "imairuyo_start is not running."
+    MsgBox "Log file not found.", vbCritical, "Error"
     WScript.Quit
 End If
 
 ' WMIを使って該当プロセスを終了
+On Error Resume Next
+Dim colProcesses, objProcess
 Set colProcesses = objWMIService.ExecQuery("SELECT * FROM Win32_Process WHERE ProcessId = " & targetProcessID)
+
+Dim processFound
+processFound = False
+
 For Each objProcess In colProcesses
     objProcess.Terminate
+    processFound = True
+    MsgBox "Terminated process with PID: " & targetProcessID, vbInformation, "Success"
 Next
+
+If Not processFound Then
+    MsgBox "Process with PID " & targetProcessID & " not found.", vbExclamation, "Not Found"
+End If
+On Error GoTo 0
 
 ' ロックファイルを削除
 If fso.FileExists(lockFilePath) Then
     fso.DeleteFile(lockFilePath)
+    MsgBox "Lock file deleted.", vbInformation, "Clean Up"
 End If
-
-WScript.Echo "imairuyo_stop completed."
